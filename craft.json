@@ -1,0 +1,36 @@
+{
+  "version": 5,
+  "name": "OpenCode",
+  "request": "Make my own version of this app",
+  "target": {
+    "kind": "local",
+    "path": "C:\\Users\\Informatics\\AppData\\Local\\Programs\\ai.opencode.desktop\\OpenCode.exe"
+  },
+  "stack": "Rust + egui (eframe)",
+  "status": "stopped",
+  "note": "Paused. Send a message to continue.",
+  "created_ms": 1795113819841,
+  "updated_ms": 1795133372842,
+  "checks": [],
+  "agent_session": "ba5b421d-7e34-4da4-9ecc-93220a660647",
+  "agent_session_by": "claude-code",
+  "agent_session_deep": true,
+  "capture_deep": true,
+  "allowed_actions": [
+    "tool:native_window_capture"
+  ],
+  "last_reply": "I'm studying the original app's packed web code to learn its screens and features before building. Next I'll unpack it to read the interface.I found the original's readable source inside the app; now reading its English text, home screen and chat screen to learn the layout.Still reading the original's source to pin down the screens; building starts right after.Setting up the Rust project now; checking the original's keyboard shortcuts first so they match.Checking how screenshots work in this version of the window library, then writing the app.Writing the project setup and checking that its building blocks can be downloaded.The building blocks are downloading and compiling in the background. Now writing the part that saves projects, sessions and settings.Now writing the AI helper: it talks to the AI service and runs its file and command tools, asking permission first.Next: colours, icons and the simple text formatting for AI answers.Building blocks compiled. Now the formatter for AI answers (bold, code, lists, headings).User messages sit on the right in a bubble up to 82% wide, as in the original. Now writing the main screens.The save didn't go through; trying again.I'll save the screen code in smaller pieces instead of one big file.Now the core: what the app keeps track of and how it reacts to the AI's messages.Now the top tab bar.Now the home page (projects on the left, sessions grouped by day on the right).Now the chat screen with the message box and the review/files side panel.Now the settings window, the search-everything palette and the small pop-up windows.Now the program's starting point, including the screenshot option.All the pieces are written; building now and fixing any errors.It built on the first try. Checking the warnings, then trying the screenshot option.Only harmless warnings. Taking a test screenshot of the app.It looks very close to the original's layout. Fixing two small text-spacing details, then testing the AI helper against a pretend AI service.Now adding automatic tests: the file tools, and a full conversation with a pretend AI service that asks to read a file, edit it and run a command.All three tests pass: the AI helper reads, edits (after asking), runs a command (after asking) and finishes. Now checking the home page picture too.The home page looks right too. Updating the checklist, then writing down the measured values the app uses.Removing my reference capture of the original from the app folder (it held your own session text), then running the comparison check.The check passed: it builds, starts and draws. One more look to settle the open question about the helper program's default permissions.The helper's code is readable inside its file. Looking for its real default values to replace my estimates.The helper's default numbers aren't stored as readable text, so those stay marked as estimates. Recording that.I built your own version of the app, called Codeloft. It copies the original's layout:\n- **Home page:** your projects on the left, and your chats grouped into Today, Yesterday and Older on the right.\n- **Chat screen:** a chat panel next to a side panel, where you can browse your project's files and see which ones the assistant changed.\n- **Message box:** you can switch between \"Build\" (makes changes) and \"Plan\" (only looks), pick a model, or type commands yourself in shell mode.\n- **Permission card:** the assistant stops and asks before it edits a file or runs a command, with \"Allow once\", \"Allow always\" or \"Deny\".\n- **Also included:** a search-everything window (Ctrl+K), light and dark themes, and the original's keyboard shortcuts.\n\nThe app builds, and the comparison check passed: it starts and draws a screen that matches the original's look. I also tested it against a pretend AI service: it read a file, asked before editing it and before running a command, then finished.\n\nThe original couldn't tell me which AI service you wanted, so I decided it connects to one using your own key. Any service that works like OpenAI's is fine, including free ones that run on your computer. Until you enter a service address and key in Settings, it shows a message telling you to do that.\n\nWhat's different from the original:\n- It doesn't use the original's built-in sign-in or its free models.\n- \"Undo\" removes your last message and its answers, but doesn't undo file changes.\n- There's no built-in terminal, browser panel, voice input or remote-machine support.\n- A few behind-the-scenes numbers are my estimates and are marked that way in its notes. These are the default permissions, how long a command may run, and how much output the assistant reads. The original keeps them in its hidden helper program, where I couldn't read them.\n- Chat titles come from the first line of your first message; the original asks the AI to write them.\n\nA good next step would be to tell me which AI service you use (OpenAI, OpenRouter, or a local one like Ollama). I can make it the default and then test a real chat with it.",
+  "asset_budget_usd": 5.0,
+  "generate_assets": false,
+  "builder": "Claude Code",
+  "approvals": {
+    "web": "allow",
+    "commands": "allow",
+    "outside_files": "allow",
+    "publish": "allow",
+    "delete_outside": "allow",
+    "system": "allow",
+    "other_tools": "allow"
+  },
+  "decompiled": true
+}
